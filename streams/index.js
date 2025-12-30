@@ -20,13 +20,13 @@ const server = http.createServer((req, res)=>{
     // res.end();
 
     // copy big file good way
-    const readStream = fs.createReadStream('sample.txt');
-    const writeStream = fs.createWriteStream('output.txt');
+    // const readStream = fs.createReadStream('sample.txt');
+    // const writeStream = fs.createWriteStream('output.txt');
 
-    readStream.on('data',(chunk)=>{
-      console.log(chunk)
-      writeStream.write(chunk)
-    });
+    // readStream.on('data',(chunk)=>{
+    //   console.log(chunk)
+    //   writeStream.write(chunk)
+    // });
 
     res.end()
 });

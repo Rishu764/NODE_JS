@@ -84,3 +84,20 @@ const server = http.createServer((req, res)=>{
 
 const PORT = 3000;
 server.listen(PORT, ()=> console.log(`Listening on port ${PORT}`));
+```
+
+## Create Custom Streams (Readable/ Writable / Transform)
+
+Readable
+```js
+import {Readable} from "stream";
+
+const readableStream = new Readable({
+    read() {}
+});
+
+readableStream.on('data',(chunk)=>{
+    console.log(chunk);
+});
+
+readableStream.push('Hello there');
